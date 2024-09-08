@@ -1,3 +1,4 @@
+import allure
 from variables import URL_ACCOUNT, URL_ORDER_HISTORY
 from account_page import AccountPage
 from locators import CommonLocators
@@ -5,11 +6,13 @@ from locators import CommonLocators
 
 class TestAccountPage:
 
+    @allure.title('Переход по клику на «Личный кабинет»')
     def test_logged_in_go_to_personal_account_page(self, driver, register_user, log_in_page):
         log_in_page.go_to_personal_account()
         assert driver.current_url == URL_ACCOUNT, \
             f'{driver.current_url=} is not equal {URL_ACCOUNT}'
 
+    @allure.title('Переход в раздел «История заказов»')
     def test_logged_in_go_to_order_history_page(self, driver, register_user, log_in_page):
         log_in_page.go_to_personal_account()
 
@@ -19,6 +22,7 @@ class TestAccountPage:
         assert driver.current_url == URL_ORDER_HISTORY, \
             f'{driver.current_url=} is not equal {URL_ORDER_HISTORY}'
 
+    @allure.title('Выход из аккаунта')
     def test_logged_in_log_off_from_personal_account(self, driver, register_user, log_in_page):
         log_in_page.go_to_personal_account()
 
