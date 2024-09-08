@@ -28,6 +28,27 @@ class MainPageLocators:
     SAUCES_LIST = By.XPATH, './/*[contains(@class, "menuContainer")]/ul[2]/a'
     INGREDIENTS_LIST = By.XPATH, './/*[contains(@class, "menuContainer")]/ul[3]/a'
 
+    BURGER_ORDER = By.XPATH, './/ul[contains(@class, "BurgerConstructor_basket")]'
+    BASKET_LIST = By.XPATH, './/span[contains(@class, "BurgerConstructor_basket")]/li'
+    EMPTY_BUN_IN_ORDER = By.XPATH, './/*[@alt="Перетяните булочку сюда (верх)"]'
+
+    ORDER_INDICATOR_TEXT = By.XPATH, './/*[text()="идентификатор заказа"]'
+    ORDER_NUM_DEFAULT = By.XPATH, './/h2[text()="9999"]'
+    ORDER_NUM = By.XPATH, './/h2[contains(@class, "Modal_modal__title_shadow")]'
+    ORDER_BUTTON = By.XPATH, './/button[text()="Оформить заказ"]'
+
+    FIRST_ORDER = By.XPATH, './/ul[contains(@class, "OrderFeed_list")]/li[1]'
+    ORDERS_LIST = By.XPATH, './/ul[contains(@class, "OrderFeed_list")]/li'
+    ORDER_WINDOW = By.XPATH, './/*[contains(@class, "Modal_orderBox")]'
+    ORDER_CONSIST = By.XPATH, './/*[text()="Cостав"]'
+    ORDER_ID = By.XPATH, './/*[contains(@class, "Modal_orderBox")]/*[contains(text(), "#0")]'
+
+    ORDERS_TOTAL = By.XPATH, './/*[text()="Выполнено за все время:"]/parent::div/p[2]'
+    ORDERS_TODAY = By.XPATH, './/*[text()="Выполнено за сегодня:"]/parent::div/p[2]'
+
+    ORDER_AT_WORK = By.XPATH, './/ul[contains(@class, "orderListReady")]/li'
+    NO_ORDERS = By.XPATH, './/*[contains(text(), "Все текущие заказы готовы!")]'
+
 
 class ResetPageLocators:
     EMAIL_FIELD = By.XPATH, './/input'
@@ -51,3 +72,5 @@ class AccountPageLocators:
     EMAIL = By.XPATH, './/*[text()="Логин"]'
     ORDER_HISTORY_LINK = By.XPATH, './/*[text()="История заказов"]'
     LOG_OFF_BUTTON = By.XPATH, './/button[text()="Выход"]'
+    ORDER_NUM = By.XPATH, './/*[contains(text(), "#0")]'
+    ORDER_LIST = By.XPATH, './/*[contains(@class, "OrderHistory_list")]/li'

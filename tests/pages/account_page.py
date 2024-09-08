@@ -1,6 +1,6 @@
 from common_objects import Page
 from variables import URL_ORDER_HISTORY
-from locators import AccountPageLocators, CommonLocators
+from locators import AccountPageLocators, CommonLocators, MainPageLocators
 
 
 class AccountPage(Page):
@@ -15,3 +15,7 @@ class AccountPage(Page):
     def click_on_logoff_button(self):
         self.try_click_on_element(AccountPageLocators.LOG_OFF_BUTTON)
         self.wait_element_be_visible(CommonLocators.LOGIN_BUTTON)
+
+    def go_to_order_feed_page(self):
+        self.try_click_on_element(CommonLocators.ORDER_FEED_BUTTON)
+        self.wait_element_be_visible(MainPageLocators.ORDER_FEED_TEXT)

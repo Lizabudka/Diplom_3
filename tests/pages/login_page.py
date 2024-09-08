@@ -1,5 +1,6 @@
+from selenium.common import TimeoutException
 from common_objects import Page
-from variables import URL_LOGIN, email, password
+from variables import URL_LOGIN, email, password, URL_MAIN_PAGE
 from locators import (LogInPageLocators, ResetPageLocators, CommonLocators,
                       MainPageLocators, AccountPageLocators)
 
@@ -34,4 +35,16 @@ class LoginPage(Page):
 
     def go_to_personal_account(self):
         self.try_click_on_element(MainPageLocators.ACCOUNT_LINK)
-        self.wait_element_be_visible(AccountPageLocators.EMAIL)
+        try:
+            self.wait_element_be_visible(AccountPageLocators.EMAIL)
+        except TimeoutException:
+            self.try_click_on_element(MainPageLocators.ACCOUNT_LINK)
+            self.wait_element_be_visible(AccountPageLocators.EMAIL)
+
+    def go_to_main_page(self):
+        self.try_click_on_element(CommonLocators.CONSTRUCTOR_BUTTON)
+        self.wait_element_be_visible(MainPageLocators.MAKE_BURGER_TEXT)
+
+    def go_to_orders_feed(self):
+        self.try_click_on_element(CommonLocators.ORDER_FEED_BUTTON)
+        self.wait_element_be_visible(MainPageLocators.ORDER_FEED_TEXT)

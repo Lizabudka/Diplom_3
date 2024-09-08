@@ -17,5 +17,10 @@ email = 'test9999@mail.ru'
 password = '0000000000'
 
 # texts
-active_status = 'input_status_active'
+ACTIVE_STATUS = 'input_status_active'
 DESCRIPTION_TEXT = 'Детали ингредиента'
+ORDER_ID_TEXT = 'идентификатор заказа'
+
+# prefix / postfix for locators
+INGREDIENT_COUNTER = '/*[contains(@class, "counter_counter")]'
+ORDER_NUM_POSTFIX = '/a/div/p[contains(text(), "#0")]'

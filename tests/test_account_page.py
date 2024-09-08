@@ -1,8 +1,6 @@
 from variables import URL_ACCOUNT, URL_ORDER_HISTORY
 from account_page import AccountPage
 from locators import CommonLocators
-from selenium.webdriver.support.wait import WebDriverWait
-from selenium.webdriver.support import expected_conditions
 
 
 class TestAccountPage:
@@ -27,5 +25,5 @@ class TestAccountPage:
         account_page = AccountPage(driver)
         account_page.click_on_logoff_button()
 
-        assert WebDriverWait(driver, 3).until(expected_conditions.visibility_of_element_located(
-            CommonLocators.LOGIN_BUTTON))
+        assert account_page.wait_element_be_visible(CommonLocators.LOGIN_BUTTON), \
+            f'Element did not appear {CommonLocators.LOGIN_BUTTON}'
