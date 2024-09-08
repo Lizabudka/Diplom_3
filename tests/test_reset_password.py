@@ -1,7 +1,7 @@
-from variables import ACTIVE_STATUS
-from login_page import LoginPage
-from reset_password_page import ResetPasswordPage
-from locators import ResetPageLocators, CommonLocators
+from pages.variables import ACTIVE_STATUS
+from pages.login_page import LoginPage
+from pages.reset_password_page import ResetPasswordPage
+from pages.locators import ResetPageLocators, CommonLocators
 import allure
 
 

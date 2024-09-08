@@ -1,9 +1,9 @@
 import allure
 import pytest
-from variables import URL_MAIN_PAGE, URL_ORDER_FEED, DESCRIPTION_TEXT, INGREDIENT_COUNTER, ORDER_ID_TEXT
-from main_page import MainPage
-from login_page import LoginPage
-from locators import MainPageLocators
+from pages.variables import URL_MAIN_PAGE, URL_ORDER_FEED, DESCRIPTION_TEXT, INGREDIENT_COUNTER, ORDER_ID_TEXT
+from pages.main_page import MainPage
+from pages.login_page import LoginPage
+from pages.locators import MainPageLocators
 
 
 class TestMainFunctions:

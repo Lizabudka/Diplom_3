@@ -1,7 +1,7 @@
 import allure
-from common_objects import Page
-from variables import URL_ORDER_HISTORY
-from locators import AccountPageLocators, CommonLocators, MainPageLocators
+from .common_objects import Page
+from .variables import URL_ORDER_HISTORY
+from .locators import AccountPageLocators, CommonLocators, MainPageLocators
 
 
 class AccountPage(Page):

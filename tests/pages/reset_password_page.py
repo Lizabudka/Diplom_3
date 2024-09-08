@@ -1,7 +1,7 @@
 import allure
-from common_objects import Page
-from locators import ResetPageLocators, CommonLocators
-from variables import email, password, URL_FORGOT_PASS
+from .common_objects import Page
+from .locators import ResetPageLocators, CommonLocators
+from .variables import email, password, URL_FORGOT_PASS
 
 
 class ResetPasswordPage(Page):

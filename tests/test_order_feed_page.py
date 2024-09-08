@@ -1,9 +1,9 @@
 import pytest
 import allure
-from account_page import AccountPage
-from main_page import MainPage
-from locators import MainPageLocators, AccountPageLocators
-from variables import ORDER_NUM_POSTFIX
+from pages.account_page import AccountPage
+from pages.main_page import MainPage
+from pages.locators import MainPageLocators, AccountPageLocators
+from pages.variables import ORDER_NUM_POSTFIX
 
 
 class TestOrderFeed:

@@ -5,14 +5,14 @@ import requests
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options as chrome_Options
 from selenium.webdriver.firefox.options import Options as firefox_Options
-from variables import name, email, password, URL_API_REGISTER, URL_API_AUTH
-from locators import MainPageLocators
-from login_page import LoginPage
-from main_page import MainPage
+from pages.variables import name, email, password, URL_API_REGISTER, URL_API_AUTH
+from pages.locators import MainPageLocators
+from pages.login_page import LoginPage
+from pages.main_page import MainPage
 
 
-@pytest.fixture(params=['chrome', 'firefox'])
 @allure.step(f'Открытие окна браузера')
+@pytest.fixture(params=['chrome', 'firefox'])
 def driver(request):
     with allure.step(f'Браузер {request.param}'):
         if request.param == 'firefox':

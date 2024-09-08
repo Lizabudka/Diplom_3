@@ -1,8 +1,7 @@
 import allure
-
-from common_objects import Page
-from locators import CommonLocators, MainPageLocators
-from variables import URL_MAIN_PAGE, URL_ORDER_FEED
+from .common_objects import Page
+from .locators import CommonLocators, MainPageLocators
+from .variables import URL_MAIN_PAGE, URL_ORDER_FEED
 from selenium.webdriver import ActionChains
 
 

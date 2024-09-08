@@ -1,8 +1,8 @@
 import allure
 from selenium.common import TimeoutException
-from common_objects import Page
-from variables import URL_LOGIN, email, password
-from locators import (LogInPageLocators, ResetPageLocators, CommonLocators,
+from .common_objects import Page
+from .variables import URL_LOGIN, email, password
+from .locators import (LogInPageLocators, ResetPageLocators, CommonLocators,
                       MainPageLocators, AccountPageLocators)
 
 

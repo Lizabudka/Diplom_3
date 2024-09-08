@@ -1,7 +1,7 @@
 from selenium.common import ElementClickInterceptedException, TimeoutException
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
-from locators import CommonLocators
+from .locators import CommonLocators
 import allure
 
 

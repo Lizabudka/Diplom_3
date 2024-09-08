@@ -1,7 +1,7 @@
 import allure
-from variables import URL_ACCOUNT, URL_ORDER_HISTORY
-from account_page import AccountPage
-from locators import CommonLocators
+from pages.variables import URL_ACCOUNT, URL_ORDER_HISTORY
+from pages.account_page import AccountPage
+from pages.locators import CommonLocators
 
 
 class TestAccountPage:
